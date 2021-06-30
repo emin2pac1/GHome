@@ -26,7 +26,23 @@
                     gap: 4px; */
                 }
 
-                
+                fieldset{
+                    margin-top: 2%;
+                    border: none;
+                }
+
+                input{
+                    width: 80%;
+                }
+
+                 button{
+                    width: 100%;
+                } 
+
+                #grid{
+                    display: grid;
+                    grid-template-columns: 90% 10%;
+                }
         </style>
     </head>
 
@@ -44,8 +60,10 @@
             <img src="media/logo.png">
             <form action="#">
                 <fieldset>
+                    <div id="grid">
                 <input type="text" placeholder="Type Search Term here">
                 <button type="submit">Search</button>
+            </div>
                 </fieldset>
             </form>
         </main>
