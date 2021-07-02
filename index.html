@@ -1,70 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="/css/style.css" rel="stylesheet" type="text/css">
+        <!-- <link href="/css/style.css" rel="stylesheet" type="text/css"> -->
         <title>
             GHome: Google's Home Replica
         </title>
         
         <meta charset="utf-8">
         <style>
-            body{
-    background-color: transparent;
-}
+            #header-row{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
 
-                img,button,input{
-                    
-                    
-                    display: block;
-                    margin: 0 auto;
-                } 
-                li{
-                    display: inline;
-                    padding: 4px;
-                    list-style-type: none;
-                    /* grid-template-columns: 10px;
-                    gap: 4px; */
-                }
+            li{
+                display: inline;
+                list-style-type: none;
+            }
 
-                fieldset{
-                    margin-top: 2%;
-                    border: none;
-                }
+            img{
+                margin: 0 auto;
+                display: block;
+            }
 
-                input{
-                    width: 80%;
-                }
+            input{
+                margin-top: 5%;
+            }
+            fieldset{
+                border: none;
+            }
 
-                 button{
-                    width: 100%;
-                } 
+            #searchform{
+                display: grid;
+                grid-template-rows: 3fr 1fr;
+                gap:25%;
+            }
 
-                #grid{
-                    display: grid;
-                    grid-template-columns: 90% 10%;
-                }
-        </style>
+            #buttons{
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 25%;
+            }
+
+            button{
+                padding: 0px;
+                width: fit-content;
+            }
+            
+      </style>
     </head>
 
     <body>
-        <nav>
+        <nav id="header-row">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Images</a></li>
+                <!-- <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li> -->
               </ul> 
         </nav>
 
         <main>
             <img src="media/logo.png">
             <form action="#">
-                <fieldset>
-                    <div id="grid">
+                    <div id="searchform">
                 <input type="text" placeholder="Type Search Term here">
-                <button type="submit">Search</button>
+                <div id="buttons">
+                <button type="submit" id="search">Search</button>
+                <button type="submit">I'm feeling Lucky</button>
+                </div>
             </div>
-                </fieldset>
+                
             </form>
         </main>
 
