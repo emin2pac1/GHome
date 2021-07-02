@@ -35,18 +35,22 @@
                 display: grid;
                 grid-template-rows: 3fr 1fr;
                 gap:25%;
+                
             }
 
+            #search{
+               grid-area: buttonsearch;
+           }
+           #lucky{
+            grid-area: buttonlucky;
+           }
             #buttons{
                 display: grid;
-                grid-template-columns: auto auto;
-                gap: 25%;
+                grid-template-columns: 20% auto 10% auto 20%;
+                grid-template-areas:
+                ". buttonsearch . buttonlucky ."; 
             }
 
-            button{
-                padding: 0px;
-                width: fit-content;
-            }
             
       </style>
     </head>
@@ -68,7 +72,7 @@
                 <input type="text" placeholder="Type Search Term here">
                 <div id="buttons">
                 <button type="submit" id="search">Search</button>
-                <button type="submit">I'm feeling Lucky</button>
+                <button type="submit" id="lucky">I'm feeling Lucky</button>
                 </div>
             </div>
                 
