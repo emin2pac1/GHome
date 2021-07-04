@@ -8,14 +8,18 @@
         
         <meta charset="utf-8">
         <style>
-            #header-row{
+            
+            body{
+                -moz-appearance: none;
+            }
+            .header-row{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
             }
 
             li{
-                display: inline;
+                display: inline-block;
                 list-style-type: none;
             }
 
@@ -34,7 +38,7 @@
             #searchform{
                 display: grid;
                 grid-template-rows: 3fr 1fr;
-                gap:25%;
+                gap:2%;
                 
             }
 
@@ -51,12 +55,56 @@
                 ". buttonsearch . buttonlucky ."; 
             }
 
+            #searchform input{
+                height: 30%;
+                width: 40%;
+                display: block;
+                margin: auto auto;
+            }
+
+            #rightlinks{
+                grid-area: rightlinks;
+                 /* position: absolute;
+                align-self: flex-end;
+                bottom: 0;
+                 
+                 align-self: end; */
+            }
+
+            #leftlinks{
+                 grid-area: leftlinks;
+                /* position: absolute;
+                bottom: 0; */
+            }
+
+            .footercontainer {
+               display: grid;
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                "leftlinks . rightlinks";
+
+                position: absolute;
+                bottom: 0;
+                
+              }
+
+              .footercontainer  li{
+                  padding: 3%;
+              }
+
+
+            
+
             
       </style>
     </head>
 
     <body>
-        <nav id="header-row">
+        <div class="container">
+        <nav class="header-row">
             <ul>
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
@@ -65,7 +113,7 @@
               </ul> 
         </nav>
 
-        <main>
+        <main class="content">
             <img src="media/logo.png">
             <form action="#">
                     <div id="searchform">
@@ -79,7 +127,29 @@
             </form>
         </main>
 
-        <footer></footer>
+        <footer>
+            <nav class="footercontainer">
+                 <div id="rightlinks">
+                <ul>
+                    <li><a href="#">How Search Works</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Advertising</a></li>
+                  </ul> 
+                </div> 
+
+                <div id="leftlinks">
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Settings</a></li>
+                      </ul> 
+                    </div>
+
+            </nav>
+    
+
+        </footer>
+        </div> <!--head container ends-->
     </body>
 
 </html>
