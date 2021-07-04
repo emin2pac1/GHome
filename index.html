@@ -44,20 +44,24 @@
 
             #search{
                grid-area: buttonsearch;
+               padding: 3%;
            }
            #lucky{
             grid-area: buttonlucky;
+            padding: 3%;
            }
             #buttons{
                 display: grid;
-                grid-template-columns: 20% auto 10% auto 20%;
+                grid-template-columns: 35% auto 5% auto 35%;
                 grid-template-areas:
                 ". buttonsearch . buttonlucky ."; 
             }
 
             #searchform input{
                 height: 30%;
-                width: 40%;
+                min-width: max-content;
+                padding-left: 10%;
+                padding-right: 10%;
                 display: block;
                 margin: auto auto;
             }
@@ -67,8 +71,10 @@
                  /* position: absolute;
                 align-self: flex-end;
                 bottom: 0;
+                
                  
                  align-self: end; */
+                 
             }
 
             #leftlinks{
@@ -85,14 +91,33 @@
                 grid-auto-flow: row;
                 grid-template-areas:
                 "leftlinks . rightlinks";
-
                 position: absolute;
                 bottom: 0;
                 
               }
+/* 
+              @media(max-width : 400px){
+                .footercontainer {
+               display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 3fr;
+                grid-auto-rows: auto;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                position: absolute;
+                bottom: 0;
+                
+              }
+              
+
+              } */
 
               .footercontainer  li{
                   padding: 3%;
+              }
+
+              [type="text"]::placeholder{
+                  text-align: center;
               }
 
 
